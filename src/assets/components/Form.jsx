@@ -1,6 +1,9 @@
 import { useState } from "react";
 
-const list = [];
+const list = [
+  { id: 1, text: "Articolo 1" },
+  { id: 2, text: "Articolo 2" },
+];
 
 const Form = () => {
   const [myList, setMyList] = useState(list);
@@ -8,7 +11,7 @@ const Form = () => {
 
   const handlerSubmit = (e) => {
     e.preventDefault();
-    setMyList([newTask, ...myList]);
+    setMyList([...myList, newTask]);
   };
 
   const handlerNewTask = (e) => {

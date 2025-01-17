@@ -8,7 +8,7 @@ const Form = () => {
 
   const handlerSubmit = (e) => {
     e.preventDefault();
-    setMyList([newTask, ...myList]);
+    setMyList([newTask, ...myList]); // Corretto: aggiornare myList invece di list
   };
 
   return (
@@ -28,9 +28,13 @@ const Form = () => {
             </button>
           </div>
           <ul className="list-group">
-            {myList.map((listItem, index) => (
-              <li key={index} className="list-group-item">
-                {listItem}
+            {myList.map((task, index) => (
+              <li
+                key={index}
+                className="list-group-item  d-flex justify-content-between"
+              >
+                {task}
+                <i class="fa-solid fa-trash"></i>
               </li>
             ))}
           </ul>

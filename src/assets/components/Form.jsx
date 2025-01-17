@@ -8,7 +8,7 @@ const Form = () => {
 
   const handlerSubmit = (e) => {
     e.preventDefault();
-    setMyList([newTask, ...myList]); // Corretto: aggiornare myList invece di list
+    setMyList([newTask, ...myList]);
   };
 
   return (

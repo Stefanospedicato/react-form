@@ -41,20 +41,22 @@ const Form = () => {
           </div>
         </form>
       </div>
-      <ul className="list-group">
-        {myList.map((task) => (
-          <li
-            key={task.id}
-            className="list-group-item  d-flex justify-content-between"
-          >
-            {task.text}
-            <i
-              className="fa-solid fa-trash"
-              onClick={() => handlerRemove(task.id)}
-            ></i>
-          </li>
-        ))}
-      </ul>
+      <div className="container">
+        <ul className="list-group">
+          {myList.map((task) => (
+            <li
+              key={task.id}
+              className="list-group-item  d-flex justify-content-between"
+            >
+              {task.text}
+              <i
+                className="fa-solid fa-trash"
+                onClick={() => handlerRemove(task.id)}
+              ></i>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
